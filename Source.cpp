@@ -35,7 +35,7 @@ void main()
 	});
 
 
-	acceptor->listen({"0.0.0.0", 80});
+	acceptor->listen({80});
 	//end acceptor
 
 

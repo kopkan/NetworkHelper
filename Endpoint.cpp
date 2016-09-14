@@ -7,6 +7,21 @@ Endpoint::Endpoint()
 	clear();
 }
 
+Endpoint::Endpoint(tcp::endpoint endpoint)
+{
+	setEndpoint(endpoint.address().to_string().c_str(), endpoint.port());
+}
+
+Endpoint::Endpoint(udp::endpoint endpoint)
+{
+	setEndpoint(endpoint.address().to_string().c_str(), endpoint.port());
+}
+
+Endpoint::Endpoint(unsigned short port)
+{
+	setEndpoint("0.0.0.0", port);
+}
+
 Endpoint::Endpoint(std::string name, unsigned short port)
 {
 	setEndpoint(name, port);

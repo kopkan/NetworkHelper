@@ -6,6 +6,9 @@ class Endpoint
 {
 public:
 	Endpoint();
+	Endpoint(boost::asio::ip::tcp::endpoint endpoint);
+	Endpoint(boost::asio::ip::udp::endpoint endpoint);
+	Endpoint(unsigned short port);
 	Endpoint(std::string name, unsigned short port);
 	Endpoint(const Endpoint& ep);
 	void setEndpoint(std::string name, unsigned short port);
